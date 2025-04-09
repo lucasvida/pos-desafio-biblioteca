@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Gestor Biblioteca</title>
+</head>
+    <header>
+        <nav class="menu">
+            <ul>
+                <a href="/">
+                    <li>Livros</li>
+                </a>
+                <a href="/pages/cadastra-livro">
+                    <li>Cadastra Livro</li>
+                </a>
+                <a href="/pages/atualiza-livro">
+                    <li>Atualiza Livro</li>
+                </a>
+                <a href="/pages/deleta-livro">
+                    <li>Deleta Livro</li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, quisquam quidem quaerat culpa aliquam magnam incidunt vel nesciunt ullam hic quod accusantium pariatur optio dignissimos? Inventore itaque consequatur vero quo.</p>
+        </div>
+    </main>
+    <footer class="footer">
+        <h4>Gestor de Livros - Todos os direitos reservados | POSTECH | 2025</h4>
+    </footer>
+<body>
+    <script src="../assets/js/main.js" defer type="module"></script>
+</body>
+</html>

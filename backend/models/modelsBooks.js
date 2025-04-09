@@ -1,9 +1,10 @@
-import mongoose, { Schema } from "mongoose";
+import mongoose from "mongoose";
 
 const booksSchema = new mongoose.Schema(
     {
         title: String,
-        date: String,
+        date: Number,
+        img: String,
         isbn: String,
         editora: String,
     }
