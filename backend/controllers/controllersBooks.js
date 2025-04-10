@@ -22,7 +22,7 @@ export const getSingleBook = async (req,res) =>{
 export const postBook = async (req,res) =>{
     try{
         const {title,date,isbn,editora} = req.body;
-        const newBook = new Book({title,date,isbn,editora});
+        const newBook = new Book({title,date,isbn,editora,img});
         await newBook.save();
         res.status(201).json({ success: true, book: newBook });
     }catch(erro){
