@@ -1,6 +1,6 @@
 *{
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
     list-style: none;
     font-family: 'Montserrat','Roboto',sans-serif;
@@ -24,7 +24,7 @@
         z-index: 5;
     }
 
-    .menu ul a li{
+    .menu ul  li a{
         margin-left: 25px !important; 
         text-transform: uppercase;
     }
@@ -81,4 +81,32 @@
     margin: 100px auto;
     padding: 20px;
     min-height: 1500px;
+}
+
+img{
+    width: 100%;
+}
+
+@layer formulario {
+    form{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        text-align: left;
+    }
+
+    form input{
+        margin-top: 20px;
+    }
+
+
+    form input[type="text"]{
+        padding: 15px;
+    }
+
+    button[type="submit"]{
+        padding: 20px;
+        cursor: pointer;
+    }
 }

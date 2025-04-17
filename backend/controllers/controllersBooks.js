@@ -21,7 +21,7 @@ export const getSingleBook = async (req,res) =>{
 
 export const postBook = async (req,res) =>{
     try{
-        const {title,date,isbn,editora} = req.body;
+        const {title,date,isbn,editora,img} = req.body;
         const newBook = new Book({title,date,isbn,editora,img});
         await newBook.save();
         res.status(201).json({ success: true, book: newBook });
