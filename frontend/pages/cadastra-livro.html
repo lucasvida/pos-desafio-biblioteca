@@ -1,44 +1,49 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/style.css">
     <title>Gestor Biblioteca</title>
 </head>
-    <header>
-        <nav class="menu">
-            <ul>
-                <li><a href="/frontend/index.html">Livros</a></li>
-                <li><a href="/cadastra-livro.html">Cadastra Livro</a></li>
-                <li><a href="./atualiza-livro.html">Atualiza Livro</a></li>
-                <li><a href="./deleta-livro.html">Deleta Livro</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <div class="container">
-            <h1>Cadastra Livro</h1>
-            <form id="cadastra-livro">
-                <label for="Título">Titulo</label><br>
-                <input type="text" name="title" id="title"><br><br>
-                <label for="ISBN">ISBN</label><br>
-                <input type="text" name="isbn" id="isbn"><br><br>
-                <label for="img">Link da Imagem</label><br>
-                <input type="text" name="img" id="img"><br><br>
-                <label for="Editora">Editora</label><br>
-                <input type="text" name="editora" id="editora"><br><br>
-                <label for="Ano de Lançamento">Ano de Lançamento</label><br>
-                <input type="text" name="date" id="date"><br><br>
-                <button type="submit">CADASTRAR</button>
-            </form>
-        </div>
-    </main>
-    <footer class="footer">
-        <h4>Gestor de Livros - Todos os direitos reservados | POSTECH | 2025</h4>
-        <p>Trabalho educacional sem fins lucatrivos. Capas de livros são ilustrativas</p>
-    </footer>
+<header>
+    <nav class="menu">
+        <ul>
+            <li><a href="../index.html">Livros</a></li>
+            <li><a href="./cadastra-livro.html">Cadastra Livro</a></li>
+            <li><a href="./atualiza-livro.html">Atualiza Livro</a></li>
+            <li><a href="./deleta-livro.html">Deleta Livro</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <div class="container">
+        <h1>Cadastra Livro</h1>
+        <form id="cadastra-livro">
+            <label for="Título">Titulo</label><br>
+            <input type="text" name="title" id="title"><br><br>
+            <label for="ISBN">ISBN</label><br>
+            <input type="text" name="isbn" id="isbn"><br><br>
+            <label for="img">Link da Imagem</label><br>
+            <input type="text" name="img" id="img" placeholder="https://www.google.com/image.jpg"><br><a
+                href="https://freeimage.host/" target="_blank"><span class="link-upload">Clique aqui para fazer o upload
+                    de uma imagem</span></a><br>
+            <label for="Editora">Editora</label><br>
+            <input type="text" name="editora" id="editora"><br><br>
+            <label for="Ano de Lançamento">Ano de Lançamento</label><br>
+            <input type="text" name="date" id="date" placeholder="Apenas Ano | Ex: 1953"><br><br>
+            <button type="submit">CADASTRAR</button>
+        </form>
+    </div>
+</main>
+<footer class="footer">
+    <h4>Gestor de Livros - Todos os direitos reservados | POSTECH | 2025</h4>
+    <p>Trabalho educacional sem fins lucatrivos. Capas de livros são ilustrativas</p>
+</footer>
+
 <body>
     <script src="../assets/js/main.js" defer type="module"></script>
 </body>
+
 </html>

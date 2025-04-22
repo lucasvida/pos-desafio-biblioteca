@@ -1,7 +1,10 @@
 "use strict";
 const gridCard = document.querySelector('.grid-container');
 const cadastraLivro = document.querySelector('#cadastra-livro');
+const atualizaLivro = document.querySelector("#atualiza-livro");
+const deletaLivro = document.querySelector("#deleta-livro");
 const urlBase = "https://pos-desafio-biblioteca-backend-production.up.railway.app";
+//Função para listar todos os livros
 (async () => {
     const response = await fetch(`${urlBase}/books`);
     const dados = await response.json();
@@ -20,6 +23,7 @@ const urlBase = "https://pos-desafio-biblioteca-backend-production.up.railway.ap
         gridCard?.appendChild(newCard);
     }
 })();
+//Evento de cadastro de livro
 cadastraLivro?.addEventListener("submit", (event) => {
     event.preventDefault();
     const form = cadastraLivro;
@@ -50,4 +54,62 @@ cadastraLivro?.addEventListener("submit", (event) => {
         .catch(error => {
         console.error('Erro:', error);
     });
+});
+//Evento de atualização de livro
+atualizaLivro?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const form = atualizaLivro;
+    const obj = {
+        title: form.title.value,
+        img: form.img.value,
+        date: Number(form.date.value),
+        editora: form.editora.value,
+        isbn: form.isbn.value,
+    };
+    console.log(obj);
+    fetch(`${urlBase}/books/update/${form.id.value}`, {
+        method: 'PUT',
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(obj),
+    })
+        .then(response => {
+        if (response.ok) {
+            alert("Livro Atualizado com Sucesso");
+            form.reset();
+        }
+        else {
+            console.error('Erro ao enviar formulário');
+        }
+    })
+        .catch(error => {
+        console.error('Erro:', error);
+    });
+});
+//Evento de deleção de livro
+deletaLivro?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const confirmacao = confirm("Você tem certeza que deseja deletar o livro?");
+    if (confirmacao) {
+        const form = deletaLivro;
+        fetch(`${urlBase}/books/delete/${form.id.value}`, {
+            method: 'DELETE',
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+            .then(response => {
+            if (response.ok) {
+                alert("Livro Deletado com Sucesso");
+                form.reset();
+            }
+            else {
+                console.error('Erro ao deletar livro');
+            }
+        })
+            .catch(error => {
+            console.error('Erro:', error);
+        });
+    }
 });
