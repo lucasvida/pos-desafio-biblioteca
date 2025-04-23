@@ -118,7 +118,7 @@ atualizaLivro?.addEventListener("submit", (event) => {
       });
   });
 
-//Evento de deleção de livro
+//Evento de exclusão de livro
 deletaLivro?.addEventListener("submit", (event) => {
     event.preventDefault();
     const confirmacao = confirm("Você tem certeza que deseja deletar o livro?");
